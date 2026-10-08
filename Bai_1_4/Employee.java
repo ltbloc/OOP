@@ -2,40 +2,43 @@ package Bai1_4;
 
 public class Employee {
     private int id;
-    private  String firstname;
-    private  String lastname;
-    private  int salary;
-    private String name;
-    private int annualSalary;
-    public int raiseSalary;
+    private String firstName;
+    private String lastName;
+    private int salary;
 
-    public Employee(int id, String firstname, String lastname, int salary , String name) {
+    public Employee(int id, String firstName, String lastName, int salary) {
         this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.salary = salary;
-        this.name = name;
-        this.annualSalary = annualSalary;
     }
-    public int getId() { return id;}
-    public void setId(int id) {this.id = id;}
-    public String getFirstname() {return firstname;}
-    public void setFirstname(String firstname) {this.firstname = firstname;}
-    public String getLastname() {return lastname;}
-    public void setLastname(String lastname) {this.lastname = lastname;}
-    public int getSalary() {return salary;}
-    public void setSalary(int salary) {this.salary = salary;}
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public int getAnnualSalary() {return salary * 12;}
-    public void setAnnualSalary(int annualSalary) {this.annualSalary = annualSalary;}
-
-    public String toString() {
-        return "Bai1_4.Employee[id =" + id + ",name=" + getName() +",salary =" + salary +"]";}
+    public int getId() {
+        return id;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public String getName() {
+        return firstName + " " + lastName;
+    }
+    public int getSalary() {
+        return salary;
+    }
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+    public int getAnnualSalary() {
+        return salary * 12;
+    }
     public int raiseSalary(int percent) {
-        salary += salary * percent / 100;
-        return  salary;
+        salary = salary + salary * percent / 100;
+        return salary;
     }
-
-
+    public String toString() {
+        return "Employee[id=" + id + ",name=" + getName()
+                + ",salary=" + salary + "]";
     }
+}
