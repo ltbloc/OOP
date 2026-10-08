@@ -1,4 +1,4 @@
-package Bai1_4;
+package Bai_1_4;
 
 public class TestMain {
    public static void main(String[] args) {
